@@ -1,19 +1,25 @@
 {
-	"name": "typescript-template",
+	"name": "@samual/assert",
 	"version": "0.0.0",
-	"description": "remember to update urls in this file",
-	"keywords": [],
-	"homepage": "https://github.com/samualtnorman/typescript-template#readme",
+	"description": "Assertion library. ",
+	"keywords": [
+		"assertions",
+		"assert",
+		"assertion",
+		"expect",
+		"unwrap"
+	],
+	"homepage": "https://github.com/samualtnorman/assert#readme",
 	"bugs": {
-		"url": "https://github.com/samualtnorman/typescript-template/issues",
+		"url": "https://github.com/samualtnorman/assert/issues",
 		"email": "me@samual.uk"
 	},
 	"license": "MIT",
 	"author": "Samual Norman <me@samual.uk> (https://samual.uk/)",
-	"repository": "github:samualtnorman/typescript-template",
+	"repository": "github:samualtnorman/assert",
 	"type": "module",
 	"dependencies": {
-		"@samual/types": "^0.0.1"
+		"@samual/types": "0.0.2-23ffc7f"
 	},
 	"devDependencies": {
 		"@babel/plugin-syntax-typescript": "^7.27.1",
@@ -25,7 +31,8 @@
 		"@types/semver": "^7.7.1",
 		"babel-plugin-here": "^1.0.2",
 		"eta": "^4.4.1",
-		"knip": "^5.71.0",
+		"jsr": "^0.13.5",
+		"knip": "^5.72.0",
 		"rolldown": "1.0.0-beta.53",
 		"semver": "^7.7.3",
 		"typescript": "^5.9.3",
@@ -33,7 +40,7 @@
 	},
 	"engines": {
 		"node": "^20.10 || ^22 || >=24",
-		"pnpm": "^10"
+		"pnpm": "^10.9"
 	},
 	"private": true
 }

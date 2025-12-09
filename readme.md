@@ -1,9 +1,15 @@
-# Typescript Template
+# Samual's Assertion Library
 Requires Node.js 20.10+, 22.0+, 24.0+, or above.
 
 ## Example
 ```js
-import { foo } from "typescript-template"
+import { assert, expect } from "@samual/assert"
 
-console.log(foo) // "bar"
+// Throws if `someValue` is falsy
+assert(someValue)
+
+// `expect()` throws if `someOtherValue` is nullish or just returns the value
+doSomething(expect(someOtherValue))
+// This is like doing `doSomething(someOtherValue!)` in TypeScript but enforced
+// in JavaScript
 ```

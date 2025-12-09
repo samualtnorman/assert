@@ -7,7 +7,7 @@ import { getExports } from "./lib/exports.js"
 	"@samual/types": "@samual/types"
 }
 
-const { name, version, license, dependencies } = packageJson
+const { version, license, dependencies } = packageJson
 
 makeDirectorySync("dist", { recursive: true })
 
@@ -15,7 +15,8 @@ const imports = Object.fromEntries(Object.entries(dependencies).map(
 	([ name, version ],) => [ name, `${name in ConvertToJsr ? `jsr:${ConvertToJsr[name]}` : `npm:${name}`}@${version}` ]
 ))
 
-writeFileSync(
-	"dist/jsr.json",
-	JSON.stringify({ name, version, license, exports: await getExports(`.d.ts`, `.js`), imports }, undefined, "\t")
-)
+writeFileSync("dist/jsr.json", JSON.stringify(
+	{ name: `@sn/assert`, version, license, exports: await getExports(`.d.ts`, `.js`), imports },
+	undefined,
+	"\t"
+))
