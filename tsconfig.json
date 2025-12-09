@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		"noEmit": true,
 		"lib": [ "es2022" ],
-		"types": [ "node", "@total-typescript/ts-reset" ],
+		"types": [ "node", "@total-typescript/ts-reset", "vitest/importMeta" ],
 		"target": "es2022",
 		"module": "preserve",
 		"moduleResolution": "bundler",
@@ -17,6 +17,7 @@
 		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"allowImportingTsExtensions": true
 	}
 }

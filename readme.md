@@ -13,3 +13,9 @@ doSomething(expect(someOtherValue))
 // This is like doing `doSomething(someOtherValue!)` in TypeScript but enforced
 // in JavaScript
 ```
+
+---
+This package is available on [JSR](jsr) and [NPM](npm).
+
+[npm]: https://www.npmjs.com/package/@samual
+[jsr]: https://jsr.io/@sn

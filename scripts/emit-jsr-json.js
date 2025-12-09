@@ -2,6 +2,14 @@
 import { mkdirSync as makeDirectorySync, writeFileSync } from "fs"
 import packageJson from "../package.json" with { type: "json" }
 import { getExports } from "./lib/exports.js"
+import { expectTruthy } from "../src/default.ts"
+
+if (!process.env.FULL_ERROR) {
+  process.on(`uncaughtException`, error => {
+    console.error(error.message)
+    process.exit(1)
+  })
+}
 
 /** @type {Record<string, string>} */ const ConvertToJsr = {
 	"@samual/types": "@samual/types"
@@ -16,7 +24,7 @@ const imports = Object.fromEntries(Object.entries(dependencies).map(
 ))
 
 writeFileSync("dist/jsr.json", JSON.stringify(
-	{ name: `@sn/assert`, version, license, exports: await getExports(`.d.ts`, `.js`), imports },
+	{ name: expectTruthy(process.env.JSR_NAME, `Missing JSR_NAME`), version, license, exports: await getExports(`.d.ts`, `.js`), imports },
 	undefined,
 	"\t"
 ))
