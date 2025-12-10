@@ -1,7 +1,7 @@
 {
 	"name": "@samual/assert",
 	"version": "0.0.0",
-	"description": "Assertion library. ",
+	"description": "Assertion library.",
 	"keywords": [
 		"assertions",
 		"assert",
