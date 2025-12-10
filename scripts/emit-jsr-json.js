@@ -1,8 +1,8 @@
 #!/usr/bin/env node
+import { expectTruthy } from "@sn/assert"
 import { mkdirSync as makeDirectorySync, writeFileSync } from "fs"
 import packageJson from "../package.json" with { type: "json" }
 import { getExports } from "./lib/exports.js"
-import { expectTruthy } from "../src/default.ts"
 
 if (!process.env.FULL_ERROR) {
   process.on(`uncaughtException`, error => {

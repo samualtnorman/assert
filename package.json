@@ -26,6 +26,7 @@
 		"@rollup/plugin-babel": "^6.1.0",
 		"@samual/lib": "^0.13.0",
 		"@samual/rolldown-config": "jsr:0.0.1-5e79465",
+		"@sn/assert": "jsr:0.0.1-655a111",
 		"@total-typescript/ts-reset": "^0.6.1",
 		"@types/node": "~20.10.8",
 		"@types/semver": "^7.7.1",

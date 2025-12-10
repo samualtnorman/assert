@@ -7,8 +7,7 @@ if (!process.env.FULL_ERROR) {
 }
 
 const { readFileSync } = await import("fs")
-const Path = await import("path")
-const { expectTruthy } = await import(Path.resolve(process.cwd(), `src/default.ts`))
+const { expectTruthy } = await import(`@sn/assert`)
 const { TARGET, JSR_NAME } = process.env
 const packageJson = JSON.parse(readFileSync("./package.json", { encoding: "utf8" }))
 const PackageName = TARGET == `jsr` ? expectTruthy(JSR_NAME, `Missing JSR_NAME`) : packageJson.name

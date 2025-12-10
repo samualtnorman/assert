@@ -24,6 +24,9 @@ importers:
       '@samual/rolldown-config':
         specifier: jsr:0.0.1-5e79465
         version: '@jsr/samual__rolldown-config@0.0.1-5e79465(prettier@3.7.4)(rollup@4.53.3)'
+      '@sn/assert':
+        specifier: jsr:0.0.1-655a111
+        version: '@jsr/sn__assert@0.0.1-655a111'
       '@total-typescript/ts-reset':
         specifier: ^0.6.1
         version: 0.6.1
@@ -761,6 +764,12 @@ packages:
 
   '@jsr/samual__rolldown-config@0.0.1-5e79465':
     resolution: {integrity: sha512-VezTHciB/JmF2kPEz0gRze2tSY+xgQV2p7LPQzWiiDwMmD9wn455AiFu5cIo0k4XNEsRpmJ0e6Jq0gdQV+VXOw==, tarball: https://npm.jsr.io/~/11/@jsr/samual__rolldown-config/0.0.1-5e79465.tgz}
+
+  '@jsr/samual__types@0.0.2-23ffc7f':
+    resolution: {integrity: sha512-R5J5yovA/JwAWcbH3DfuMpU1zPNApN+4Q69c1gyhBa9mkTfx7gFpY7pJTzsdO9uIrCLzmsABuM9Wg65jgYXttw==, tarball: https://npm.jsr.io/~/11/@jsr/samual__types/0.0.2-23ffc7f.tgz}
+
+  '@jsr/sn__assert@0.0.1-655a111':
+    resolution: {integrity: sha512-sHGegMCgFxhoh/oyCTCP/v9gDJXyDR58Jsi9B6lbnU4ZMAiKtADbrfSN9JgsTUhLLdOfC55DVrh724TBBP05Yw==, tarball: https://npm.jsr.io/~/11/@jsr/sn__assert/0.0.1-655a111.tgz}
 
   '@napi-rs/wasm-runtime@1.1.0':
     resolution: {integrity: sha512-Fq6DJW+Bb5jaWE69/qOE0D1TUN9+6uWhCeZpdnSBk14pjLcCWR7Q8n49PTSPHazM37JqrsdpEthXy2xn6jWWiA==}
@@ -2543,6 +2552,12 @@ snapshots:
       - prettier
       - rollup
       - supports-color
+
+  '@jsr/samual__types@0.0.2-23ffc7f': {}
+
+  '@jsr/sn__assert@0.0.1-655a111':
+    dependencies:
+      '@jsr/samual__types': 0.0.2-23ffc7f
 
   '@napi-rs/wasm-runtime@1.1.0':
     dependencies:
