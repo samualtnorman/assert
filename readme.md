@@ -15,7 +15,7 @@ doSomething(expect(someOtherValue))
 ```
 
 ---
-This package is available on [JSR](jsr) and [NPM](npm).
+This package is available on [JSR][jsr] and [NPM][npm].
 
-[npm]: https://www.npmjs.com/package/@samual
-[jsr]: https://jsr.io/@sn
+[npm]: https://www.npmjs.com/package/@samual/assert
+[jsr]: https://jsr.io/@sn/assert

@@ -37,5 +37,5 @@ This package is also [available on NPM][npm].
 This package is also [available on JSR][jsr].
 <% } else throw Error(`Invalid or missing TARGET.`) %>
 
-[npm]: https://www.npmjs.com/package/@samual
-[jsr]: https://jsr.io/@sn
+[npm]: https://www.npmjs.com/package/@samual/assert
+[jsr]: https://jsr.io/@sn/assert
