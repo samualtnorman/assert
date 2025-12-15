@@ -13,7 +13,7 @@ Object.defineProperty(AssertError.prototype, `name`, { value: `AssertError` })
 export function assert<T>(
 	value: T,
 	message: string | MessageFn<T & Falsy> = "Assertion failed"
-): asserts value is NonFalsy<T> {
+): asserts value {
 	if (!value)
 		throw new AssertError(typeof message == `string` ? message : message(value as T & Falsy))
 }
