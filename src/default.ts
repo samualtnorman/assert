@@ -30,6 +30,24 @@ export function assertNonNull<T>(
 }
 
 /**
+ * An alias for {@linkcode assert()} but with a type signature that explicitly narrows with {@linkcode NonFalsy<>}.
+ *
+ * This is useful because in this code:
+ * ```ts
+ * function foo<T>(value: T) {
+ *     assert(value)
+ *
+ *     value
+ *     // ^? (parameter) value: NonNullable<T>
+ * }
+ * ```
+ *
+ * TypeScript incorrectly narrows the type of `value` with `NonNullable<>` when it should be using something like
+ * {@linkcode NonFalsy<>}.
+ */
+export const assertNonFalsy: <T>(value: T, message?: string | MessageFn<T & Falsy>) => asserts value is NonFalsy<T> = assert
+
+/**
  * Assertion function that ensures value is not [nullish](https://developer.mozilla.org/en-US/docs/Glossary/Nullish).
  * @throws If value is nullish.
  * @returns Given value.
@@ -52,7 +70,7 @@ export const expectTruthy = <T>(
 	value: T,
 	message: string | MessageFn<T & Falsy> = `Truthy expectation failed`
 ): NonFalsy<T> => {
-	assert(value, message)
+	assertNonFalsy(value, message)
 
 	return value
 }
