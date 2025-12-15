@@ -30,11 +30,11 @@ doSomething(expect(someOtherValue))
 
 ---
 <% if (TARGET == `git`) { %>
-This package is available on [JSR](jsr) and [NPM](npm).
+This package is available on [JSR][jsr] and [NPM][npm].
 <% } else if (TARGET == `jsr`) { %>
-This package is also [available on NPM](npm).
+This package is also [available on NPM][npm].
 <% } else if (TARGET == `npm`) { %>
-This package is also [available on JSR](jsr).
+This package is also [available on JSR][jsr].
 <% } else throw Error(`Invalid or missing TARGET.`) %>
 
 [npm]: https://www.npmjs.com/package/@samual
