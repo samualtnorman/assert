@@ -81,7 +81,7 @@ if (import.meta.vitest) {
 
 	test(`assert()`, () => {
 		assert(true)
-		
+
 		vitestExpect(() => {
 			assert(false)
 		}).toThrow(AssertError)
