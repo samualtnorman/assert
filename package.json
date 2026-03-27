@@ -19,7 +19,7 @@
 	"repository": "github:samualtnorman/assert",
 	"type": "module",
 	"dependencies": {
-		"@samual/types": "0.0.2-23ffc7f"
+		"@samual/types": "^0.0.2"
 	},
 	"devDependencies": {
 		"@babel/plugin-syntax-typescript": "^7.27.1",

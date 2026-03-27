@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@samual/types':
-        specifier: 0.0.2-23ffc7f
-        version: 0.0.2-23ffc7f
+        specifier: ^0.0.2
+        version: 0.0.2
     devDependencies:
       '@babel/plugin-syntax-typescript':
         specifier: ^7.27.1
@@ -1196,8 +1196,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@samual/types@0.0.2-23ffc7f':
-    resolution: {integrity: sha512-6vqdhFUB2mcW+E2S+OdLLXuBZeg7+GL6ocAq4XqD7OiTG24MOnvFpiTDk2XxkBgAYHmVqfX/tABfgYAros1a3w==}
+  '@samual/types@0.0.2':
+    resolution: {integrity: sha512-iRbfdz4Kc6fg1IYz0KughcbX8JeMynPiaPyGEprnFC9ROdR6Pxlg0VZxGgIWkMTrAxaCoo90lgfGlWzvIni7kg==}
     engines: {node: ^20.10 || >=22}
 
   '@standard-schema/spec@1.0.0':
@@ -2923,7 +2923,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.53.3':
     optional: true
 
-  '@samual/types@0.0.2-23ffc7f': {}
+  '@samual/types@0.0.2': {}
 
   '@standard-schema/spec@1.0.0': {}
 
