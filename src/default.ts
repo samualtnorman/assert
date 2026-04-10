@@ -46,7 +46,7 @@ export function assertNonNull<T>(
  * {@linkcode NonFalsy<>}.
  * @alias
  */
-export const assertNonFalsy: <T>(value: T, message?: string | MessageFn<T & Falsy>) => asserts value is NonFalsy<T> = assert
+export const assertTruthy: <T>(value: T, message?: string | MessageFn<T & Falsy>) => asserts value is NonFalsy<T> = assert
 
 /**
  * Assertion function that ensures value is not [nullish](https://developer.mozilla.org/en-US/docs/Glossary/Nullish).
@@ -71,7 +71,7 @@ export const expectTruthy = <T>(
 	value: T,
 	message: string | MessageFn<T & Falsy> = `Truthy expectation failed`
 ): NonFalsy<T> => {
-	assertNonFalsy(value, message)
+	assertTruthy(value, message)
 
 	return value
 }
