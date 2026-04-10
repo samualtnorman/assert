@@ -44,6 +44,15 @@ export function assertNonNull<T>(
  *
  * TypeScript incorrectly narrows the type of `value` with `NonNullable<>` when it should be using something like
  * {@linkcode NonFalsy<>}.
+ *
+ * ```ts
+ * function foo<T>(value: T) {
+ *     assertTruthy(value)
+ *
+ *     value
+ *     // ^? (parameter) value: NonFalsy<T>
+ * }
+ * ```
  * @alias
  */
 export const assertTruthy: <T>(value: T, message?: string | MessageFn<T & Falsy>) => asserts value is NonFalsy<T> = assert
