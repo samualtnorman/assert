@@ -85,6 +85,10 @@ export const expectTruthy = <T>(
 	return value
 }
 
+export function unreachable(message: string = "Hit unreachable"): never {
+	throw new AssertError(message)
+}
+
 if (import.meta.vitest) {
 	const { test, expect: vitestExpect } = import.meta.vitest
 
@@ -112,5 +116,9 @@ if (import.meta.vitest) {
 	test(`expectTruthy()`, () => {
 		vitestExpect(expectTruthy(true)).toBe(true)
 		vitestExpect(() => expectTruthy(false)).toThrow(AssertError)
+	})
+
+	test(`unreachable()`, () => {
+		vitestExpect(() => unreachable()).toThrow(AssertError)
 	})
 }
